@@ -43,6 +43,6 @@ Explore existing blog posts, create new ones, and perform CRUD operations.
 
 Backend: Node.js, Express, MongoDB
 
-Frontend: React, HTML, CSS
+Frontend: React with vite for faster dev, HTML, CSS
 
 ...
