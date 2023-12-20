@@ -1,0 +1,46 @@
+.box {
+    border: 1px solid #d0cfcf;
+    border-radius: 4px;
+    padding: 1em;
+    background: white;
+    margin: 0 auto;
+    width:50%;
+  }
+
+  h1.box-title {
+    color: #AEAEAE;
+    font-weight: 300;
+    line-height: 30px;
+    font-size:1.6em;
+    text-align: center;
+    margin: 0;
+  }
+  .box-input {
+    display: block;
+    font-size: 0.7em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 1em;
+    border-radius: 5px;
+    width: 80%;
+    height: 3em;
+  }
+  .box-button {
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 80%;
+    height: 2em;
+    display: block;
+  
+  }
+  .box-register a {
+    text-decoration: none;
+    color: #4e4e4e;
+  }
+  .box-input:focus {
+      outline: none;
+      border: 1px dashed #747474;
+    }
+
