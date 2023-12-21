@@ -38,20 +38,34 @@ app.post('/register', async (req, res) => {
 
 });
 
-app.post('/login',async (req, res)=>{
-    const {username, password}= req.body;
-    const userDoc = await User.findOne({username});
-    const passOk = bcrypt.compareSync(password, userDoc.password)
-    if(passOk){
-        jwt.sign({username, id:userDoc._id}, secret, {}, (err, token)=>{
-            if (err) throw err;
-            res.cookie('token', token).json({
-                id: userDoc._id,
-                username,
+app.post('/login', async (req, res) => {
+    const { username, password } = req.body;
+    try {
+        const userDoc = await User.findOne({ username });
+
+        if (!userDoc) {
+            return res.status(401).json({ error: 'Invalid username or password' });
+        }
+
+        const passOk = bcrypt.compareSync(password, userDoc.password);
+
+        if (passOk) {
+            jwt.sign({ username, id: userDoc._id }, secret, {}, (err, token) => {
+                if (err) throw err;
+                res.cookie('token', token).json({
+                    id: userDoc._id,
+                    username,
+                });
             });
-        })
+        } else {
+            res.status(401).json({ error: 'Invalid username or password' });
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        res.status(500).json({ error: 'An error occurred during login' });
     }
-})
+});
+
 
 app.get('/profile', (req,res) => {
     const {token} = req.cookies;

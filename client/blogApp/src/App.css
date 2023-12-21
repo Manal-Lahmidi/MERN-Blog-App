@@ -112,10 +112,18 @@ div.post-page a.edit{
   border-radius: 5px;
   text-decoration: none;
 }
+svg{
+  height: 50px;
+
+}
 a svg{
   height: 20px;
 
 }
 a.logout{
   cursor: pointer;
+}
+svg{
+  height: 50px;
+
 }
