@@ -25,9 +25,9 @@ npm install
 
 3-Start the backend and frontend servers:
 
-Backend: cd API then npm start
+Backend: cd API then node/nodemon index.js
 
-Frontend: cd client/blogApp then npm start
+Frontend: cd client/blogApp then npm run dev 
 
 ***Usage
 
