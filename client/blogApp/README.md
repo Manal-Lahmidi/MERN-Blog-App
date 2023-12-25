@@ -14,7 +14,7 @@ Client: Frontend developed with React for the user interface. Allows users to vi
 
 To run this project locally, follow these steps:
 
-1-Clone the repository: git clone https://github.com/yourusername/your-repo.git
+1-Clone the repository: git clone https://github.com/Manal-Lahmidi/MERN-Blog-App.git
 
 2-Install dependencies in both the API and client directories:
 
